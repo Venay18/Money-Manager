@@ -104,25 +104,26 @@ class MoneyManager extends Component {
     const balance = income - expenses
 
     return (
-      <div>
+      <div className="app-container">
         <div>
           <div>
             <div className="header-container">
               <h1 className="heading">Hi, Richard</h1>
               <p className="para">
-                Welcome back to your <span>Money Manager</span>
+                Welcome back to your{' '}
+                <span className="span-ele">Money Manager</span>
               </p>
             </div>
-            <div>
+            <div className="money-details-container">
               <MoneyDetails
                 balance={balance}
                 income={income}
                 expenses={expenses}
               />
             </div>
-            <div>
-              <form onSubmit={this.onClickAddBtn}>
-                <h1>Add Transaction</h1>
+            <div className="transaction-history-container">
+              <form className="form" onSubmit={this.onClickAddBtn}>
+                <h1 className="form-heading">Add Transaction</h1>
                 <label htmlFor="title" className="label">
                   TITLE
                 </label>
@@ -137,9 +138,8 @@ class MoneyManager extends Component {
                   AMOUNT
                 </label>
                 <input
-                  type="number"
+                  type="text"
                   id="amount"
-                  min="0"
                   className="input"
                   onChange={this.onChangeAmount}
                   value={amount}
@@ -160,14 +160,14 @@ class MoneyManager extends Component {
                   Add
                 </button>
               </form>
-              <div>
+              <div className="history-container">
                 <h1 className="history">History</h1>
-                <div className="history-heading">
-                  <p>Title</p>
-                  <p>Amount</p>
-                  <p>Type</p>
-                </div>
-                <ul>
+                <ul className="transactions-table">
+                  <li className="history-heading">
+                    <p>Title</p>
+                    <p>Amount</p>
+                    <p>Type</p>
+                  </li>
                   {transactionHistory.map(each => (
                     <TransactionItem
                       eachList={each}

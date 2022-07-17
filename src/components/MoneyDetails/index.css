@@ -1,1 +1,31 @@
 /* Write your CSS here */
+.money-manager-container {
+  display: flex;
+}
+.each-container {
+  display: flex;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin: 10px;
+}
+.image {
+  height: 60px;
+  width: 60px;
+}
+.balance-color {
+  background-color: #ecfccb;
+  border: 3x solid #84cc16;
+  outline: 1px solid red;
+}
+.income-color {
+  background-color: #cffafe;
+  border: 1px solid #cffafe;
+}
+.expenses-color {
+  background-color: #ede9fe;
+  border: 1px solid #ede9fe;
+}
